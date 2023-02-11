@@ -1,12 +1,13 @@
 import './App.css';
+import { SearchBar } from '../SearchBar/SearchBar';
 
-function App() {
+export function App() {
   return (
     <div className="App">
    <div>
   <h1><span className="highlight">The</span>Guardian</h1>
-  <div class="App">
-    Add a Search Bar
+  <div className="App">
+    <SearchBar/>
     <div className="Feed">
      Add the feed, which houses articles
     </div>
@@ -15,5 +16,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
