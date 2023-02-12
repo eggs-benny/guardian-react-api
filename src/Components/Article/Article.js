@@ -4,8 +4,10 @@ export function Article({ headline, date, image, byline, url }) {
   const time = new Date(date);
   return (
     <div className="Article">
-      <div className="Article-information">
-        <img src={image} alt="Serena Williams" height="300" />
+      <div className="Article-image">
+        <img src={image} alt="guardian article"/>
+      </div>
+      <div className="Article-content">
         <a target="_blank" href={url} rel="noreferror noreferrer">
           <h3>{headline}</h3>
         </a>

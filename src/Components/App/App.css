@@ -1,17 +1,17 @@
 body {
   background-image: url('./background-image.jpg');
   background-size: cover;
-  background-position: center;
   background-repeat: repeat;
 }
 
 html,
 #root {
   height: 100%;
+  width:inherit
 }
 
 html {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 h1 {
@@ -28,20 +28,25 @@ h1 .highlight {
 }
 
 h2 {
-  font-family: 'Noticia+Text';
+  font-family: 'News+Cycle';
   font-size: 1.55rem;
+}
+
+p {
+  font-family: 'News+Cycle';
+  font-size: .75rem;
 }
 
 .App {
   height: 100%;
-  padding: 0 17% 60% 17%;
-  font-family: 'Noticia+Text';
+  padding: 0 50% 60% 17%;
+  font-family: 'News+Cycle';
   font-weight: 600;
   color: #fff;
 }
 
 @media only screen and (max-width: 1020px) {
-  .App-playlist {
+  .Feed {
     align-items: center;
     flex-direction: column;
   }

@@ -16,15 +16,22 @@ export function App() {
     }
   };
 
+  const search = (term) => {
+    Guardian.search(term).then((searchResults) => {
+      console.log(searchResults)
+      setArticles(searchResults);
+    });
+  }
+
   return (
-      <div>
-        <h1>
-          <span className="highlight">The</span>Guardian
-        </h1>
-        <div className="App">
-          <SearchBar getArticles={getArticles} />
-          <Feed articles={articles} />
-        </div>
+    <div>
+      <h1>
+        <span className="highlight">The </span>Guardian
+      </h1>
+      <div className="App">
+        <SearchBar getArticles={getArticles} onSearch={search} />
+        <Feed articles={articles} />
       </div>
+    </div>
   );
 }

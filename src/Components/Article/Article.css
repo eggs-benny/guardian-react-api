@@ -5,3 +5,11 @@ a {
 a:hover {
    color: rgb(167, 167, 177)
 }
+
+.Article-image {
+  width:500px
+}
+
+.Article-content {
+  width:500px
+}

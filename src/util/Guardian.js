@@ -24,7 +24,30 @@ const Guardian = {
       console.error(error);
       return []
     }
+  },
+
+  async search(term) {
+    try {
+      const res = await fetch(`${apiUrlStem}${apiKey}${fields}&q=${term}`)
+      const jsonRes = await res.json();
+      if (!jsonRes) {
+        return [];
+      }
+      return jsonRes.response.results.map((article) => {
+        return {
+          id: article.id,
+          headline: article.fields.headline,
+          image: article.fields.thumbnail,
+          date: article.webPublicationDate,
+          byline: article.fields.byline,
+          url: article.webUrl
+        };
+      });
+    } catch (error) {
+      console.error(error);
+      return [];
+    }
   }
-}
+};
 
 export default Guardian
