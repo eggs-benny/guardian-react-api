@@ -1,12 +1,18 @@
 import './Article.css';
 
-export function Article({ headline, image }) {
+export function Article({ headline, date, image, byline, url }) {
+  const time = new Date(date);
   return (
     <div className="Article">
-      <div className="Article-content">
+      <div className="Article-information">
         <img src={image} alt="Serena Williams" height="300" />
-        <h2>{headline}</h2>
-        <p>Published at 12:56:01 on 11.02.2023</p>
+        <a target="_blank" href={url} rel="noreferror noreferrer">
+          <h3>{headline}</h3>
+        </a>
+        <p>
+          Published by {byline} at {time.toLocaleTimeString().slice(0, 5)} on{' '}
+          {time.toDateString()}
+        </p>
       </div>
     </div>
   );

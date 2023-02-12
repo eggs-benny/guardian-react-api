@@ -8,17 +8,18 @@ export function Feed({ articles }) {
         articles.map((article) => {
           return (
             <Article
-              headline={article.headline}
-              date={article.date}
               key={article.id}
+              headline={article.headline}
               image={article.image}
+              date={article.date}
+              byline={article.byline}
               url={article.url}
             />
           );
         })
       ) : (
         <div>
-          <p>Click refresh feed</p>
+          <p>Click to refresh feed</p>
         </div>
       )}
     </div>

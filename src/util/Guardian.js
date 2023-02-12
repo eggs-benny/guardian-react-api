@@ -14,7 +14,10 @@ const Guardian = {
         return {
           id: article.id,
           headline: article.fields.headline,
-          image: article.fields.thumbnail
+          image: article.fields.thumbnail,
+          date: article.webPublicationDate,
+          byline: article.fields.byline,
+          url: article.webUrl
         };
       });
     } catch (error) {
