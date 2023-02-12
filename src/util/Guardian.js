@@ -1,38 +1,17 @@
-import apiKey from "./apiKey";
-const apiUrlStem = `https://content.guardianapis.com/search?api-key=`
-const fields = `&show-fields=thumbnail,headline,byline&order-by=newest`
+import apiKey from './apiKey';
+const apiUrlStem = `https://content.guardianapis.com/search?api-key=`;
+const fields = `&show-fields=thumbnail,headline,byline&order-by=newest`;
 
 const Guardian = {
-  async getArticles() {
-    try {
-      const res = await fetch(`${apiUrlStem}${apiKey}${fields}`);
-      const jsonRes = await res.json();
-      if (!jsonRes) {
-        return []
-      }
-      return jsonRes.response.results.map((article) => {
-        return {
-          id: article.id,
-          headline: article.fields.headline,
-          image: article.fields.thumbnail,
-          date: article.webPublicationDate,
-          byline: article.fields.byline,
-          url: article.webUrl
-        };
-      });
-    } catch (error) {
-      console.error(error);
-      return []
-    }
-  },
-
   async search(term) {
     try {
-      const res = await fetch(`${apiUrlStem}${apiKey}${fields}&q=${term}`)
+      const res = await fetch(`${apiUrlStem}${apiKey}${fields}&q=${term}`);
       const jsonRes = await res.json();
+
       if (!jsonRes) {
         return [];
       }
+
       return jsonRes.response.results.map((article) => {
         return {
           id: article.id,
@@ -50,4 +29,4 @@ const Guardian = {
   }
 };
 
-export default Guardian
+export default Guardian;
