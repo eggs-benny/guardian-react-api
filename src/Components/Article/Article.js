@@ -1,7 +1,6 @@
 import './Article.css';
-import image from './Example-Image.png';
 
-export function Article({ headline }) {
+export function Article({ headline, image }) {
   return (
     <div className="Article">
       <div className="Article-content">
