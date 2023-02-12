@@ -10,7 +10,7 @@ export function App() {
   const getArticles = async () => {
     try {
       const articles = await Guardian.getArticles();
-      console.log(articles)
+      setArticles(articles);
     } catch (error) {
       console.error(error);
     }
