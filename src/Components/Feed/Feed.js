@@ -4,7 +4,7 @@ import { Article } from '../Article/Article';
 export function Feed({ articles }) {
   return (
     <div className="Feed">
-      {articles !== [] && articles.length > 0 ? (
+      {articles.length > 0 ? (
         articles.map((article) => {
           return (
             <Article
@@ -19,7 +19,7 @@ export function Feed({ articles }) {
         })
       ) : (
         <div>
-          <p>Click to refresh feed</p>
+          <p>Enter a search term or click 'refresh headlines' to refresh feed</p>
         </div>
       )}
     </div>

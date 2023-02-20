@@ -1,8 +1,50 @@
-# Getting Started with Create React App
+# Guardian React API
+Click [here](https://guardian-react-api.vercel.app/) to check out the site (try it on mobile too!)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+About
+This is a useful 1 page site built with react and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It leverages the Guardian's OpenPlatform API to pull the most up-to-date Guardian headlines when you hit the refresh button.
+The webiste is intended to be used to refresh the feed of the most up-to-date articles, and also to search for specific types of articles too.
+React was used to allow for easy module creation, allowing for the housing of articles within the feed, and the feed and search bar within the main app, making it easily amendable.
 
-## Available Scripts
+Technologies used
+
+#### Testing
+
+#### Styling
+
+#### Linting
+
+#### Planning
+
+#### Deployment
+This site was deployed using Vercel as it is a free and easy to use deployment partner.
+
+Input Handling
+
+Usage
+On visiting the [site](https://guardian-react-api.vercel.app/), start by clicking the 'refresh feed' button, which will generate the most up-to-date stories. You can repeat this action later to see if any new stories have been published.
+
+Alternatively you can type in a search query to see if the Guardian has any stories on this topic. For some (hopefully!) contrasting stories you could try 'Rishi Sunak' then 'Arsenal'.
+
+
+Development
+Planning:
+(image of planning)
+
+Tests:
+
+
+How to build the environment:
+Initialize app:
+npx create-react-app
+
+dependencies
+[eg] npm i sass jest cypress
+
+You will need to get an api key from the Guardian:
+And save it to a file called [./src/util/apiKey.js] in this format
+
 
 In the project directory, you can run:
 
@@ -14,57 +56,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

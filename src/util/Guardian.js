@@ -9,7 +9,7 @@ const Guardian = {
       const jsonRes = await res.json();
 
       if (!jsonRes) {
-        return [];
+        return [] //{articles: [], error: "Couldn't xxx"}; // pete tip
       }
 
       return jsonRes.response.results.map((article) => {
